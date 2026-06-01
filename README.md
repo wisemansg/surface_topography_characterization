@@ -1,211 +1,109 @@
-#  Ball Burnishing of Laser Cladded SS316L Surface🛠️
+#  Surface Topography Characterization of Superfinished Laser Cladded Surfaces🔍
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Scanning%20Electron%20Microscopy%20(SEM)-00BFFF?logo=electron&logoColor=white" />
-  <img src="https://img.shields.io/badge/Optical%20Microscopy-4A7043?logo=materialdesign&logoColor=white" />
-  <img src="https://img.shields.io/badge/Contact%20Profilometer-2E8B57?logo=standard&logoColor=white" />
-  <img src="https://img.shields.io/badge/Ball%20Burnishing-FF6F00?logo=3dprinter&logoColor=white" />
+  <img src="https://img.shields.io/badge/Confocal%20Microscopy-00BFFF?logo=electron&logoColor=white" />
+  <img src="https://img.shields.io/badge/Focus%20Variation%20Microscopy-4A7043?logo=materialdesign&logoColor=white" />
+  <img src="https://img.shields.io/badge/Surface%20Metrology-2E8B57?logo=standard&logoColor=white" />
   <img src="https://img.shields.io/badge/Materials%20Science-8B4513?logo=materialdesign&logoColor=white" />
 </p>
 
 ---
 
-This project investigates the ball burnishing process on laser cladded SS316L surfaces (1-layer and 5-layer) and bulk material. The study examines the effect of feed rate on surface roughness (Ra, Rz) and bearing parameters after turning and ball burnishing operations.
+This project characterizes the 3D surface topography of laser cladded SS316L samples after ball burnishing and belt finishing using confocal and focus variation microscopy. The study analyzes the effect of superfinishing techniques on roughness parameters (Ra, Rz, Rpk, Rvk) and bearing area parameters with and without Gaussian filtering.
 
 ## 1. Introduction
 
-Ball burnishing, a post-machining technique, assumes a pivotal role in enhancing the surface characteristics and mechanical properties of machined metallic components. Employing a ball typically crafted from materials such as aluminium carbide, cemented carbide, or silicon nitride, under emulsion pressure, spanning a range of 80 to 200 bar. The ball’s methodical rolling action across the surface, coupled with the application of a normal force exerts a pressure which impacts the surface integrity of a substrate. These enhancement signatures include induced plastic deformation, improved compressive residual stress and geometric parameters, notably surface roughness. The resultant synergy of these refinements collectively contributes to a substantial augmentation in the fatigue life of the treated metallic components.
+The surface of a solid delimits its volume and defines the region where interactions with its environment occur. Surface topography characterization involves the systematic study and analysis of the physical features and variations present on the surface of a material or object. The motivation is to comprehensively understand, quantify, and describe the surface’s form, roughness, and waviness. This process is crucial for various scientific, engineering, and industrial applications, as surface topography directly impacts the functionality and performance of materials.
 
-![Ball Burnishing Schematic](https://github.com/wisemansg/ballfinishing/raw/main/assets/A%20schematic%20representation%20of%20ball%20burnishing%20.jpeg)
-
-**Figure 1**: A schematic representation of ball burnishing
+Surface roughness is a second-order effect. Surface profiles are generated due to manufacturing technology used to produce surfaces. The four scales to characterize the functionality and integrity of the surface are:
+1. Shape
+2. Waviness
+3. Roughness
+4. Micro-roughness
 
 ## 🎯 2. Objectives
 
-The aim of this practical session is to control the roughness of the material SS 316L, deposited by laser cladding and cold spraying with the following objectives:
-- Understanding how ball burnishing process works.
-- To investigate the effect of ball burnishing on the surface roughness of laser-clad stainless steel 316L.
-- To investigate the influence of feed rate of the ball burnishing process on the surface roughness of laser clad stainless steel.
+- Analyze the 3D topography characteristics by non-contact techniques.
+- Analyze the effect of super finishing techniques on roughness parameters.
+- To use the effect of the Gaussian filter on the topography analysis.
+- Analysis of waviness of Ball burnished and Belt finished surfaces.
 
-## 🛠️ 3. Materials and Methods
+## 🛠️ 3. Materials and Methodology
 
-![Ecoroll Tool](https://github.com/wisemansg/ballfinishing/raw/main/assets/Ecoroll%20Tool%20Information..jpeg)
+After the super-finishing processes on the laser cladding sample, three samples were selected for topography analysis:
+1. Belt finished cladded sample with 40 microns grains (BF 40)
+2. Ball burnished clad sample with different feed rates
+3. Ball Burnished substrate at 0.1 mm/min feed rate (SB 0.1)
 
-**Figure 2**: Ecoroll Tool Information
+The surface of both samples was analyzed by confocal microscope and focus variation microscope.
 
-**Table 1: Process Parameters for Ball Burnishing Operation**
+![Cladded Sample Ball Burnished](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/Cladded%20sample%20ball%20burnished%20at%20different%20feed.jpeg)
 
-| Parameter      | Unit    | Value |
-|----------------|---------|-------|
-| Speed          | mm/min  | 120   |
-| Load           | N       | 250   |
-| Ball Diameter  | mm      | 6     |
-| Pressure       | bar     | 100   |
+**Figure 1**: Cladded sample ball burnished at different feed
 
-**Table 2: Process Parameters for Turning Operation**
+![Cladded Sample under Microscopes](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/Cladded%20sample%20under%20(a)%20confocal%20microscope%20and%20(b)%20focus%20vision%20microscope.jpeg)
 
-| Parameter                  | Unit     | Value |
-|----------------------------|----------|-------|
-| Cutting Speed Vc           | mm/min   | 120   |
-| Feed (f)                   | mm/rev   | 0.2   |
-| Depth of cut (ap) for Bulk | mm       | 0.2   |
-| Depth of cut (ap) for 5 layer | mm    | 1     |
-| Depth of cut (ap) for 1 layer | mm    | 0.5   |
+**Figure 2**: Cladded sample under (a) confocal microscope and (b) focus vision microscope
 
-![Cold Sprayed Specimen](https://github.com/wisemansg/ballfinishing/raw/main/assets/Cold-sprayed%20specimen%20after%20several%20turning%20process..jpeg)
+![3D Topography Methodology](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/Overview%20of%203D%20topography%20methodology.jpeg)
 
-**Figure 3**: Cold-sprayed specimen after several turning processes
+**Figure 3**: Overview of 3D topography methodology
 
 ## 📊 4. Results and Discussion
 
-### 4.1 Analysis of Laser Cladded 1-Layered Specimen
+### Confocal Microscopy
 
-**Table 3: Experimental and theoretical Ra values for ball burnishing**
+![Ra and Rz Comparison](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/Comparison%20of%20Ra%20and%20Rz%20with%20ball%20burnishing%20(a)%20before%20and%20(b)%20after%20applying%20the%20filter.jpeg)
 
-| Test | Feed (mm/rev) | ap (mm) | Vc (mm/min) | Ra(µm) | Ratheo µm | Variation % |
-|------|---------------|---------|-------------|--------|-----------|-------------|
-| 1    | 0.17          | 1       | 120         | 0.276  | 0.309     | 11          |
-| 2    | 0.17          | 1       | 120         | 0.258  | 0.309     | 17          |
-| 3    | 0.17          | 1       | 120         | 0.258  | 0.309     | 17          |
-| 4    | 0.05          | 1       | 120         | 0.243  | 0.0267    | 809         |
-| 5    | 0.05          | 1       | 120         | 0.245  | 0.0267    | 817         |
-| 6    | 0.05          | 1       | 120         | 0.198  | 0.0267    | 641         |
-| 7    | 0.2           | 1       | 120         | 0.310  | 0.428     | 28          |
-| 8    | 0.2           | 1       | 120         | 0.330  | 0.428     | 23          |
-| 9    | 0.2           | 1       | 120         | 0.304  | 0.428     | 29          |
-| 10   | 0.1           | 1       | 120         | 0.080  | 0.107     | 25          |
-| 11   | 0.1           | 1       | 120         | 0.074  | 0.107     | 31          |
-| 12   | 0.1           | 1       | 120         | 0.066  | 0.107     | 38          |
+**Figure 4**: Comparison of Ra and Rz with ball burnishing (a) before and (b) after applying the filter
 
-As we can see from the Table 3; the theoretical Ra values are matching with the experimental Ra values. But, on test numbers 4, 5, and 6 which have feed rates of 0.05 mm/rev, there is a large difference between theoretical and experimental values. Our experimental values were significantly higher than the theoretical values. This was unexpected. We think that the reason for this big difference is laser cladding creates a non-homogeneous surface. In addition, the reason for the low roughness values in the tests performed with 0.1 mm/rev feed rate is that the measurement length of the stylus profilometer for those readings were smaller compared to other measurements (3.5 mm instead of 4.8 mm).
+![Feed Rate vs Roughness](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/(a)%20Illustration%20of%20the%20relationship%20between%20Feed%20Rate%20and%20Surface%20Roughness%20(b)%20Zoomed-in%20graph%20for%20Ra%20and%20Ra%20filtered%20values..jpeg)
 
-**Table 4: Experimental and theoretical Ra values for turning**
+**Figure 5**: (a) Illustration of the relationship between Feed Rate and Surface Roughness (b) Zoomed-in graph for Ra and Ra filtered values
 
-| Test | Feed (mm/rev) | ap (mm) | Vc (mm/min) | Ra(µm) | Ratheo (µm) | Variation % |
-|------|---------------|---------|-------------|--------|-------------|-------------|
-| 1    | 0.2           | 1       | 120         | 1.945  | 1.604       | 21          |
-| 2    | 0.2           | 1       | 120         | 1.783  | 1.604       | 11          |
-| 3    | 0.2           | 1       | 120         | 1.846  | 1.604       | 15          |
-| 4    | 0.2           | 1       | 120         | 1.729  | 1.604       | 8           |
-| 5    | 0.2           | 1       | 120         | 1.677  | 1.604       | 5           |
-| 6    | 0.2           | 1       | 120         | 1.734  | 1.604       | 8           |
+![Rvk and Rpk Comparison](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/(a)%20Comparison%20of%20Rvk%20and%20Rvk%20filtered%20and%20(b)%20Comparison%20of%20Rpk%20and%20Rpk%20filtered%20with%20ball%20burnishing%2C%20Substrate%2C%20Finish%20Turning%2C%20and%20Belt%20Finishing%20before%20and%20after%20applying%20the%20filter.jpeg)
 
-![Ra vs Feed - 1 Layer](https://github.com/wisemansg/ballfinishing/raw/main/assets/Ra%20vs%20feed%20rate%20graph%20for%20laser%20cladded%201-layer%20specimen..jpeg)
+**Figure 6**: (a) Comparison of Rvk and Rvk filtered and (b) Comparison of Rpk and Rpk filtered
 
-**Figure 4**: Ra vs feed rate graph for laser cladded 1-layer specimen
+![Topography Images](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/The%20topography%20image%20using%20confocal%20microscopy%20after%20(a)%20Finish%20Turning-%20FT%200.2%20(b)%20Ball%20burnishing%20-%20BB%200.2%20(c)%20and%20Belt%20finishing%20-%20BF%2040.jpeg)
 
-![Rz vs Feed - 1 Layer](https://github.com/wisemansg/ballfinishing/raw/main/assets/Rz%20vs%20feed%20rate%20graph%20for%20laser%20cladded%201-layer%20specimen..jpeg)
+**Figure 7**: The topography image using confocal microscopy after (a) Finish Turning (b) Ball burnishing (c) Belt finishing
 
-**Figure 5**: Rz vs feed rate graph for laser cladded 1-layer specimen
+### Focus Variation Microscopy
 
-![Surface Parameters - 1 Layer](https://github.com/wisemansg/ballfinishing/raw/main/assets/Surface%20parameters%20vs%20feed%20rate%20graph%20for%20laser%20cladded%201-layer%20specimen..jpeg)
+![Ra and Rz Observation](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/(a)%20Observation%20of%20Ra%20and%20(b)%20Rz%20with%20ball%20burnishing%20and%20before%20and%20after%20applying%20the%20filter.jpeg)
 
-**Figure 6**: Surface parameters vs feed rate graph for laser cladded 1-layer specimen
+**Figure 8**: (a) Observation of Ra and (b) Rz with ball burnishing and before and after applying the filter
 
-The same trend is followed for the Abbott-Firestone parameters (Rk, Rpk, and Rvk). The parameters decrease due to the ball burnishing compared to the turned sample. And as earlier observed for the Ra and Rz values, these parameters also initially decrease as the feed rate is reduced, but increase when the feed rate is further reduced from f=0.1 mm/rev to f=0.05 mm/rev. We propose the reason for the decrease in roughness parameters observed when the feed rate is further lowered is that the lower feed of 0.05 mm/rev does not affect the signature of the clad surface and therefore, the roughness does not decrease, but rather, increases.
+![Rvk and Rpk Observation](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/Observation%20of%20Rvk%20and%20Rpk%20with%20ball%20burnishing.jpeg)
 
-### 4.2 Analysis of Laser Cladded 5-Layered Specimen
+**Figure 9**: Observation of Rvk and Rpk with ball burnishing
 
-**Table 5: Experimental and theoretical Ra values for turning (5-layer)**
+![Roughness and Topography Profile](https://github.com/wisemansg/surface_topography_characterization/raw/main/assets/Roughness%20and%20topography%20profile%20of%20(a)%20Ball%20Burnishing%20Substrate%20-%20SB%200.1%20(b)%20Ball%20Burnished%20of%20Cladded%20Sample%20-%20BB%200.2%20(c)%20Belt%20Finished%20Sample%20BF%2040.jpeg)
 
-| Test | Feed (mm/rev) | ap (mm) | Vc (mm/min) | Ra(µm) | Ratheo (µm) | Variation % |
-|------|---------------|---------|-------------|--------|-------------|-------------|
-| 1    | 0.2           | 1       | 120         | 1.484  | 1.6038      | 7           |
-| 2    | 0.2           | 1       | 120         | 1.473  | 1.6038      | 8           |
-| 3    | 0.2           | 1       | 120         | 1.48   | 1.6038      | 8           |
-| 4    | 0.2           | 1       | 120         | 1.815  | 1.6038      | 13          |
-| 5    | 0.2           | 1       | 120         | 1.879  | 1.6038      | 17          |
-| 6    | 0.2           | 1       | 120         | 1.875  | 1.6038      | 17          |
-| 7    | 0.2           | 1       | 120         | 1.865  | 1.6038      | 16          |
-| 8    | 0.2           | 1       | 120         | 1.837  | 1.6038      | 15          |
-| 9    | 0.2           | 1       | 120         | 1.754  | 1.6038      | 9           |
-| 10   | 0.2           | 1       | 120         | 1.716  | 1.6038      | 7           |
-| 11   | 0.2           | 1       | 120         | 1.745  | 1.6038      | 9           |
+**Figure 10**: Roughness and topography profile of (a) Ball Burnishing Substrate (b) Ball Burnished Cladded Sample (c) Belt Finished Sample
 
-**Table 6: Experimental and theoretical Ra values for ball burnishing (5-layer)**
+## 🚀 Real-World Applications of Surface Topography Characterization
 
-| Test | Feed (mm/rev) | ap (mm) | Vc (mm/min) | Ra(µm) | Ratheo (µm) | Variation % |
-|------|---------------|---------|-------------|--------|-------------|-------------|
-| 1    | 0.05          | 1       | 120         | 0.303  | 0.0267      | 1034        |
-| 2    | 0.05          | 1       | 120         | 0.283  | 0.0267      | 959         |
-| 3    | 0.1           | 1       | 120         | 0.188  | 0.1069      | 76          |
-| 4    | 0.1           | 1       | 120         | 0.162  | 0.1069      | 52          |
-| 5    | 0.15          | 1       | 120         | 0.263  | 0.2406      | 9           |
-| 6    | 0.15          | 1       | 120         | 0.287  | 0.2406      | 19          |
-| 7    | 0.2           | 1       | 120         | 0.299  | 0.4277      | 30          |
-| 8    | 0.2           | 1       | 120         | 0.324  | 0.4277      | 24          |
-| 9    | 0.2           | 1       | 120         | 0.323  | 0.4277      | 24          |
-| 10   | 0.2           | 1       | 120         | 0.3    | 0.4277      | 30          |
-| 11   | 0.2           | 1       | 120         | 0.327  | 0.4277      | 24          |
-| 12   | 0.1           | 1       | 120         | 0.289  | 0.1069      | 170         |
-| 13   | 0.1           | 1       | 120         | 0.277  | 0.1069      | 159         |
-| 14   | 0.1           | 1       | 120         | 0.28   | 0.1069      | 162         |
+Surface topography characterization using advanced non-contact techniques (confocal and focus variation microscopy) plays a critical role in modern industry. Key real-world applications include:
 
-![Ra vs Feed - 5 Layer](https://github.com/wisemansg/ballfinishing/raw/main/assets/Ra%20vs%20feed%20rate%20graph%20for%20laser%20cladded%205-layer%20specimen..jpeg)
-
-**Figure 7**: Ra vs feed rate graph for laser cladded 5-layer specimen
-
-![Rz vs Feed - 5 Layer](https://github.com/wisemansg/ballfinishing/raw/main/assets/Rz%20vs%20feed%20rate%20graph%20for%20laser%20cladded%205-layer%20specimen..jpeg)
-
-**Figure 8**: Rz vs feed rate graph for laser cladded 5-layer specimen
-
-![Surface Parameters - 5 Layer](https://github.com/wisemansg/ballfinishing/raw/main/assets/Surface%20parameters%20vs%20feed%20rate%20graph%20for%20laser%20cladded%205-layer%20specimen..jpeg)
-
-**Figure 9**: Surface parameters vs feed rate graph for laser cladded 5-layer specimen
-
-### 4.3 Analysis of Substrate (Bulk) Surface
-
-**Table 7: Experimental and theoretical Ra values for turning (bulk)**
-
-| Test | Feed (mm/rev) | ap (mm) | Vc (mm/min) | Ra(µm) | Ratheo (µm) | Variation % |
-|------|---------------|---------|-------------|--------|-------------|-------------|
-| 1    | 0.2           | 1       | 120         | 3.646  | 1.604       | 127         |
-| 2    | 0.2           | 1       | 120         | 3.267  | 1.604       | 104         |
-| 3    | 0.2           | 1       | 120         | 4.084  | 1.604       | 155         |
-
-**Table 8: Experimental and theoretical Ra values for ball burnishing (bulk)**
-
-| Test | Feed (mm/rev) | ap (mm) | Vc (mm/min) | Ra(µm) | Ratheo (µm) | Variation % |
-|------|---------------|---------|-------------|--------|-------------|-------------|
-| 1    | 0.2           | 1       | 120         | 0.762  | 0.4277      | 78          |
-| 2    | 0.2           | 1       | 120         | 0.51   | 0.4277      | 19          |
-| 3    | 0.2           | 1       | 120         | 0.607  | 0.4277      | 42          |
-| 4    | 0.1           | 1       | 120         | 0.289  | 0.1069      | 170         |
-| 5    | 0.1           | 1       | 120         | 0.277  | 0.1069      | 159         |
-| 6    | 0.1           | 1       | 120         | 0.28   | 0.1069      | 162         |
-
-![Ra vs Feed - Bulk](https://github.com/wisemansg/ballfinishing/raw/main/assets/Ra%20vs%20feed%20rate%20graph%20for%20bulk%20specimen..jpeg)
-
-**Figure 10**: Ra vs feed rate graph for bulk specimen
-
-![Rz vs Feed - Bulk](https://github.com/wisemansg/ballfinishing/raw/main/assets/Rz%20vs%20feed%20rate%20graph%20for%20bulk%20specimen..jpeg)
-
-**Figure 11**: Rz vs feed rate graph for bulk specimen
-
-![Surface Parameters - Bulk](https://github.com/wisemansg/ballfinishing/raw/main/assets/Surface%20parameters%20vs%20feed%20rate%20graph%20for%20bulk%20specimen..jpeg)
-
-**Figure 12**: Surface parameters vs feed rate graph for bulk specimen
-
-Tests were also carried out on the bulk sample, which does not contain any cladding. While comparing the effect of ball burnishing to turning, it is observed that the roughness parameters all decrease for the burnished surface compared to the turned surface. The effect of changing the feed rates was also studied for two feed rates, f= 0.2 mm/rev and 0.1 mm/rev. By decreasing the feed rates, the roughness parameters were all observed to decrease.
-
-### 4.4 Analysis of Cold-Sprayed Surface
-
-Two types of materials (copper and stainless steel) were coated on to the aluminium substrate. After several turning trials smooth surface could not be obtained. This is because during cold spray, the coating becomes very hard due to the high deformation. Even though turning was tried many times with different parameters, they all failed. A smooth surface could not be obtained and the cutting tool broke. Therefore it could not be machined unless prior heat treatment was done. Due to the lack of time the heat treatment process could not done.
-
-## 🚀 Applications of Ball Burnishing
-
-- Enhancement of surface finish and fatigue life of high-value components
-- Post-processing of laser cladded and cold sprayed surfaces
-- Aerospace, automotive, and precision engineering applications
+- **Aerospace Components**: Optimizing surface finish of turbine blades, landing gear, and structural parts to improve fatigue life, reduce drag, and enhance aerodynamic performance.
+- **Automotive Industry**: Enhancing wear resistance and sealing properties of engine cylinders, pistons, gears, and brake components through precise control of roughness and bearing parameters.
+- **Medical Implants**: Ensuring proper osseointegration and biocompatibility of orthopedic implants, dental screws, and prosthetics by tailoring surface texture for cell adhesion and reduced wear debris.
+- **Additive Manufacturing**: Post-process quality control of laser cladded and 3D printed parts to validate surface integrity before service.
+- **Precision Tooling & Molds**: Improving mold release, product quality, and tool life in injection molding and die casting.
+- **Lubrication and Tribology**: Designing surfaces that retain lubricant (via controlled valleys - Rvk) while minimizing friction (controlled peaks - Rpk).
+- **Research & Development**: Correlating manufacturing parameters with functional performance in advanced materials and coatings.
 
 ## 📌 5. Conclusions
 
-The experiments were carried out to study the ball burnishing process, to understand the effect of ball burnishing a surface compared to turning, and the effect of varying the feed rates for the ball burnishing. When ball burnishing is carried out, all the roughness parameters studied (Ra, Rz, Rk, Rpk, Rvk) decreased compared to the sample on which only turning was done. This is expected from the process, as it deforms and smoothens the surface. Theoretically, the roughness parameters are expected to decrease when the feed rate for ball burnishing is lowered. This was observed for some feed rates. However, on the experiments done on the laser clad samples, there is an increase in the roughness parameters when the feed was decreased to 0.05 mm/rev. This is attributed to the feed not affecting the signature of the clad surface due to the inherent non-homogeneous nature of the laser cladding process. To conclude, ball burnishing is an excellent process to utilize to obtain good surface finish. However, more tests could be done at lower feed rates in the future to conclude properly about the deviation from the theoretical roughness that is observed at lower feeds.
+3D measurements were made for mapping Surface Topography using Confocal Microscopy and Focus Variation Microscopy on Ball Burnished, and Belt finished samples of laser clad with Stainless steel 316L on C45 Steel. The signature observed is that as the feed rate increases, the roughness parameter Ra increases. Meanwhile, Rz tends to decrease and increase for the Ball Burnishing operation with 3D measurements. There is a variation among the values obtained from the 2D profilometer for Ra and Rz for both operations. The Belt finished surface is observed to be slightly rougher than the ball-burnished surface. When the skewness parameter Ssk is negative(-ve), the valley is more dominant than the peak over the area.
 
 ## 🛠️ Tools & Methods Used
 
-- CNC Lathe with Ecoroll Ball Burnishing Tool
-- Contact Profilometer
+- Confocal Microscopy
+- Focus Variation Microscopy
+- MountainsMap Expert Software (Gaussian filtering)
 - Python for data analysis
 
